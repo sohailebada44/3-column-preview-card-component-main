@@ -1,0 +1,92 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+:root {
+    --Bright-orange: hsl(31, 77%, 52%);
+    --Dark-cyan: hsl(184, 100%, 22%);
+    --Very-dark-cyan: hsl(179, 100%, 13%);
+    --Transparent-white-paragraphs: hsla(0, 0%, 100%, 0.75);
+    --Very-light-gray-background-headings-buttons: hsl(0, 0%, 95%);
+}
+body {
+    background-color: var(--Very-light-gray-background-headings-buttons);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-size: 15px;
+}
+.wrapper {
+    border-radius: 0.5rem;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+.sedans, .suvs, .luxury {
+    color: var(--Transparent-white-paragraphs);
+    max-width: 365px;
+    height: 550px;
+    padding: 50px;
+}
+h1 {
+    font-size: 40px;
+    text-transform: uppercase;
+    font-family: 'Big Shoulders Display', cursive;
+    margin: 30px 0;
+}
+p {
+    margin-right: 73px;
+    font-family: 'Lexend Deca', sans-serif;
+    line-height: 1.9;
+    margin-bottom: 5rem;
+}
+.sedans {
+    background-color: var(--Bright-orange);
+}
+.suvs {
+    background-color: var(--Dark-cyan);
+}
+.luxury {
+    background-color: var(--Very-dark-cyan);
+}
+button {
+    width: 180px;
+    height: 60px;
+    border: 3px solid var(--Very-light-gray-background-headings-buttons);
+    border-radius: 40px;
+    transition-duration: 0.3s;
+    font-size: 15px;
+    cursor: pointer;
+}
+.sedans button {
+    color: var(--Bright-orange);
+}
+.suvs button {
+    color: var(--Dark-cyan);
+}
+.luxury button {
+    color: var(--Very-dark-cyan);
+}
+button:hover {
+    background-color: transparent;
+}
+.sedans button:hover, .suvs button:hover, .luxury button:hover {
+    color: var(--Transparent-white-paragraphs);
+}
+@media (max-width: 767px) {
+    .wrapper {
+        margin-top: 40px;
+        display: grid;
+        grid-template-columns: 1fr;
+        margin-bottom: 40px;
+    }
+    p {
+        margin: 0 54px 40px 0;
+    }
+    .sedans, .suvs, .luxury {
+        height: 490px;
+        max-width: 352px;
+    }
+}
